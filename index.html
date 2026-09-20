@@ -153,6 +153,28 @@ footer{max-width:1440px;margin:16px auto 0;padding:16px 28px;display:flex;justif
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(14px);transition:.5s}
 .reveal.in{opacity:1;transform:none}
+/* ── SMOOTH MODERN POLISH ── */
+.mm-svg{height:30px;width:auto;display:block;filter:drop-shadow(0 0 10px rgba(62,198,255,.45))}
+.card{border-radius:18px;border:1px solid rgba(120,170,220,.15);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 50px rgba(0,0,0,.45)}
+.card:hover{border-color:rgba(62,198,255,.3)}
+.stats-inner{border-radius:18px;border:1px solid rgba(120,170,220,.17);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 50px rgba(0,0,0,.45)}
+.photo{border-radius:24px;box-shadow:0 0 0 1px rgba(62,198,255,.4),0 0 36px rgba(47,155,255,.28),0 18px 50px rgba(0,0,0,.6)}
+.pill{border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));box-shadow:inset 0 1px 0 rgba(255,255,255,.07);transition:transform .15s,border-color .15s,background .15s}
+.pill:hover{transform:translateY(-1px);border-color:rgba(62,198,255,.55);background:rgba(62,198,255,.1)}
+.pill i{box-shadow:inset 0 0 0 1px rgba(255,255,255,.25),0 2px 6px rgba(0,0,0,.4)}
+.pbox,.cert{border-radius:14px}
+.pbox{border:1px solid rgba(120,170,220,.14)}
+.comp-logo,.plogo{position:relative;border-radius:11px;box-shadow:0 4px 14px rgba(0,0,0,.45),inset 0 0 0 1px rgba(0,0,0,.06);overflow:hidden}
+.comp-logo img,.plogo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;display:block}
+.logo-agfa{font-size:9px;font-weight:900;letter-spacing:.4px;color:#141414;background:#fff;width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:2px}
+.logo-agfa span{color:#e11d48;font-size:8px}
+.logo-m{font-size:23px;font-weight:900;background:linear-gradient(135deg,#2f9bff 20%,#7c5cff 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo-npag{font-size:17px;background:linear-gradient(180deg,#e8f5e9,#c8e6c9);width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.logo-aramco{font-size:17px;color:#fff;background:radial-gradient(circle at 35% 30%,#34d399,#047857);width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.logo-ei{font-size:16px;color:#fff;background:linear-gradient(135deg,#38bdf8,#1d4ed8);width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.btn-primary{border-radius:14px}
+.btn-ghost{border-radius:14px}
+.open-badge{border-radius:14px}
 @media(max-width:1100px){.hero{grid-template-columns:220px minmax(0,1fr)}.right-tag{display:none}.grid3{grid-template-columns:1fr 1fr}.nav{display:none}.nav.mobile-open{display:flex;position:absolute;top:100%;left:0;right:0;background:#071226;flex-direction:column;padding:14px 28px;gap:14px;border-bottom:1px solid var(--border)}.hamburger{display:block}.cert-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.topnav{padding:10px 14px}.brand{font-size:16px}.hero{grid-template-columns:1fr;padding:20px 14px}.photo{width:100%;max-width:420px;height:300px;margin:0 auto}.meta3{grid-template-columns:1fr;gap:12px}.meta3>div{border:0;border-top:1px solid #223b5e;padding:12px 0 0}.meta3>div:first-child{border:0;padding-top:0}.grid3{grid-template-columns:1fr;padding:0 14px}.stats{padding:0 14px}.stats-inner{grid-template-columns:1fr 1fr;gap:14px}.stat{border:0;padding:0}.connect{grid-template-columns:1fr}.cert-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.script{display:none}footer{flex-direction:column;text-align:center}.cta-row .btn-primary,.cta-row .btn-ghost{flex:1;justify-content:center}}
 @media(max-width:480px){.topnav{padding:10px 12px}.mm-logo{font-size:24px}.btn-connect{padding:7px 12px;font-size:12px}.hero{padding:16px 12px}.photo{height:260px}.stats{padding:0 12px}.stats-inner{grid-template-columns:1fr;padding:16px}.grid3{padding:0 12px}.wide{padding:0 12px}.card,.wide-card{padding:14px}.pill{font-size:11.5px;padding:5px 10px 5px 5px}.connect{grid-template-columns:1fr}.proj .pbox p{min-height:0}.modal{padding:16px}#toast{max-width:92vw;text-align:center}}
@@ -163,7 +185,7 @@ footer{max-width:1440px;margin:16px auto 0;padding:16px 28px;display:flex;justif
 <body>
 
 <header class="topnav">
-<div class="brand"><span class="mm-logo">M</span> Moaz Mohamed</div>
+<div class="brand"><svg class="mm-svg" viewBox="0 0 48 28" fill="none" aria-hidden="true"><defs><linearGradient id="mmg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fd3ff"/><stop offset="1" stop-color="#1a7bff"/></linearGradient></defs><path d="M3 25 L11 4 L18 19 L24 9 L30 19 L37 4 L45 25" stroke="url(#mmg)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Moaz Mohamed</div>
 <nav class="nav" id="mainNav">
 <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#exp">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
 </nav>
@@ -209,11 +231,11 @@ footer{max-width:1440px;margin:16px auto 0;padding:16px 28px;display:flex;justif
 <div class="card-head"><div><h3>Technical Skills</h3><div class="sub2">Tools &amp; Technologies</div></div><button class="link" data-modal="skillsModal">View All →</button></div>
 <input class="skill-search" id="skillSearch" type="search" placeholder="Filter skills… (e.g. DICOM, Linux)"/>
 <div class="pills" id="skillPills">
-<span class="pill"><i style="background:#1a6dff">◍</i>PACS</span><span class="pill"><i style="background:#2f9bff">★</i>RIS</span><span class="pill"><i style="background:#0e9">◎</i>VNA</span><span class="pill"><i style="background:#334155">✛</i>DICOM</span><span class="pill"><i style="background:#444">⇄</i>HL7</span>
-<span class="pill"><i style="background:#e11d48">✦</i>AGFA Enterprise Imaging</span><span class="pill"><i style="background:#16a34a">M</i>Millensys</span><span class="pill"><i style="background:#dc2626">◯</i>Oracle</span>
-<span class="pill"><i style="background:#eab308;color:#111">▲</i>Linux</span><span class="pill"><i style="background:#0891b2">▦</i>Windows Server</span><span class="pill"><i style="background:#4f46e5">V</i>VMware</span><span class="pill"><i style="background:#0ea5e9">❖</i>Hyper-V</span>
-<span class="pill"><i style="background:#0ea5e9">🐳</i>Docker</span><span class="pill"><i style="background:#2563eb">☸</i>Kubernetes</span><span class="pill"><i style="background:#facc15">🐍</i>Python</span><span class="pill"><i style="background:#facc15;color:#111">JS</i>JavaScript</span>
-<span class="pill"><i style="background:#7f1d1d">M</i>Mirth Connect</span><span class="pill"><i style="background:#1d4ed8">R</i>Rhapsody</span><span class="pill"><i style="background:#0369a1">🐬</i>MySQL</span>
+<span class="pill"><i style="background:linear-gradient(135deg,#4da3ff,#1a6dff)">◍</i>PACS</span><span class="pill"><i style="background:linear-gradient(135deg,#5cc8ff,#2f9bff)">★</i>RIS</span><span class="pill"><i style="background:linear-gradient(135deg,#34d399,#059669)">◎</i>VNA</span><span class="pill"><i style="background:linear-gradient(135deg,#64748b,#334155)">✛</i>DICOM</span><span class="pill"><i style="background:linear-gradient(135deg,#71717a,#3f3f46)">⇄</i>HL7</span>
+<span class="pill"><i style="background:linear-gradient(135deg,#fb4d6d,#c81e3a)">✦</i>AGFA Enterprise Imaging</span><span class="pill"><i style="background:linear-gradient(135deg,#4ade80,#16a34a)">M</i>Millensys</span><span class="pill"><i style="background:linear-gradient(135deg,#f87171,#b91c1c)">◯</i>Oracle</span>
+<span class="pill"><i style="background:linear-gradient(135deg,#fde047,#eab308);color:#111">▲</i>Linux</span><span class="pill"><i style="background:linear-gradient(135deg,#22d3ee,#0891b2)">▦</i>Windows Server</span><span class="pill"><i style="background:linear-gradient(135deg,#818cf8,#4f46e5)">V</i>VMware</span><span class="pill"><i style="background:linear-gradient(135deg,#38bdf8,#0284c7)">❖</i>Hyper-V</span>
+<span class="pill"><i style="background:linear-gradient(135deg,#4fc3f7,#0288d1)">🐳</i>Docker</span><span class="pill"><i style="background:linear-gradient(135deg,#5aa9ff,#326ce5)">☸</i>Kubernetes</span><span class="pill"><i style="background:linear-gradient(135deg,#4b8bbe 50%,#ffd43b 50%)">🐍</i>Python</span><span class="pill"><i style="background:linear-gradient(135deg,#f7df1e,#eab308);color:#111">JS</i>JavaScript</span>
+<span class="pill"><i style="background:linear-gradient(135deg,#b91c1c,#7f1d1d)">M</i>Mirth Connect</span><span class="pill"><i style="background:linear-gradient(135deg,#60a5fa,#1d4ed8)">R</i>Rhapsody</span><span class="pill"><i style="background:linear-gradient(135deg,#38bdf8,#0369a1)">🐬</i>MySQL</span>
 <span class="pill hidden-extra"><i style="background:#991b1b">DB</i>Oracle Database</span><span class="pill hidden-extra"><i style="background:#7c3aed">◉</i>Looker Analytics</span><span class="pill hidden-extra"><i style="background:#0d9488">⚙</i>Networking</span><span class="pill hidden-extra"><i style="background:#0d9488">◈</i>SQL Optimization</span><span class="pill hidden-extra"><i style="background:#334155">⬡</i>Keycloak / SSO</span><span class="pill hidden-extra"><i style="background:#475569">▤</i>JBoss / WildFly</span>
 </div>
 <button class="link" id="moreSkills" style="margin-top:10px">+ Show all skills</button>
@@ -222,17 +244,17 @@ footer{max-width:1440px;margin:16px auto 0;padding:16px 28px;display:flex;justif
 <div class="card reveal" id="exp">
 <div class="card-head"><div><h3>Professional Experience</h3><div class="sub2">My Career Journey</div></div><button class="link" data-modal="expModal">View All →</button></div>
 <div class="tl">
-<div class="tl-item"><div class="comp-logo">AGFA<span style="color:#e11d48">◆</span><img src="https://logo.clearbit.com/agfahealthcare.com" alt="" loading="lazy" onerror="this.remove()"/></div><b>Team Leader – Implementation &amp; Support Engineer</b><div class="co">AGFA HealthCare</div><small>Jul 2024 – Present &nbsp;|&nbsp; Riyadh, Saudi Arabia</small><p>Leading implementation and support activities for Enterprise Imaging solutions across Middle East and EMEA region.</p></div>
-<div class="tl-item"><div class="comp-logo" style="background:linear-gradient(145deg,#fff,#c9e0f2);color:#2d67a5;font-size:20px">M</div><b>L3 Technical Support Team Leader</b><div class="co">Millensys</div><small>Before Jul 2024 &nbsp;|&nbsp; Middle East</small><p>Led technical support team and handled complex healthcare IT implementations and support cases.</p></div>
-<div class="tl-item"><div class="comp-logo" style="background:linear-gradient(145deg,#fff,#c9e0f2);color:#2d67a5;font-size:20px">M</div><b>Senior Application Support Engineer</b><div class="co">Millensys</div><small>Earlier Experience</small><p>Provided L2/L3 support for healthcare systems including PACS, RIS, VNA and integrations.</p></div>
+<div class="tl-item"><div class="comp-logo"><span class="logo-agfa">AGFA<span>◆</span></span><img src="https://logo.clearbit.com/agfahealthcare.com" alt="" loading="lazy" onerror="this.remove()"/></div><b>Team Leader – Implementation &amp; Support Engineer</b><div class="co">AGFA HealthCare</div><small>Jul 2024 – Present &nbsp;|&nbsp; Riyadh, Saudi Arabia</small><p>Leading implementation and support activities for Enterprise Imaging solutions across Middle East and EMEA region.</p></div>
+<div class="tl-item"><div class="comp-logo"><span class="logo-m">M</span></div><b>L3 Technical Support Team Leader</b><div class="co">Millensys</div><small>Before Jul 2024 &nbsp;|&nbsp; Middle East</small><p>Led technical support team and handled complex healthcare IT implementations and support cases.</p></div>
+<div class="tl-item"><div class="comp-logo"><span class="logo-m">M</span></div><b>Senior Application Support Engineer</b><div class="co">Millensys</div><small>Earlier Experience</small><p>Provided L2/L3 support for healthcare systems including PACS, RIS, VNA and integrations.</p></div>
 </div></div>
 
 <div class="reveal"><div class="card" id="projects">
 <div class="card-head"><div><h3>Featured Projects</h3><div class="sub2">Selected Highlights</div></div><button class="link" data-modal="projModal">View All →</button></div>
 <div class="proj">
-<div class="pbox"><div class="ph"><div class="plogo">🌴<img src="https://logo.clearbit.com/moh.gov.sa" alt="" loading="lazy" onerror="this.remove()"/></div><div><b>NPAG - Saudi MOH</b><small>National PACS Deployment</small></div></div><p>Large-scale PACS deployment for Ministry of Health across multiple sites.</p><div class="tags"><span>PACS</span><span>VNA</span><span>Migration</span></div></div>
-<div class="pbox"><div class="ph"><div class="plogo" style="background:#0aa14a">✦</div><div><b>Aramco</b><small>HIS Integration</small></div></div><p>Integration of AGFA solutions with Aramco HIS environment.</p><div class="tags"><span>HL7</span><span>Integration</span><span>Enterprise</span></div></div>
-<div class="pbox"><div class="ph"><div class="plogo" style="background:#1a8bff">🗄️</div><div><b>Enterprise Imaging</b><small>Implementation &amp; Support</small></div></div><p>Deployment and support of AGFA Enterprise Imaging solutions.</p><div class="tags"><span class="y">AGFA</span><span class="y">DICOM</span><span class="y">Support</span></div></div>
+<div class="pbox"><div class="ph"><div class="plogo"><span class="logo-npag">🌴</span><img src="https://logo.clearbit.com/moh.gov.sa" alt="" loading="lazy" onerror="this.remove()"/></div><div><b>NPAG - Saudi MOH</b><small>National PACS Deployment</small></div></div><p>Large-scale PACS deployment for Ministry of Health across multiple sites.</p><div class="tags"><span>PACS</span><span>VNA</span><span>Migration</span></div></div>
+<div class="pbox"><div class="ph"><div class="plogo"><span class="logo-aramco">✦</span></div><div><b>Aramco</b><small>HIS Integration</small></div></div><p>Integration of AGFA solutions with Aramco HIS environment.</p><div class="tags"><span>HL7</span><span>Integration</span><span>Enterprise</span></div></div>
+<div class="pbox"><div class="ph"><div class="plogo"><span class="logo-ei">🗄️</span></div><div><b>Enterprise Imaging</b><small>Implementation &amp; Support</small></div></div><p>Deployment and support of AGFA Enterprise Imaging solutions.</p><div class="tags"><span class="y">AGFA</span><span class="y">DICOM</span><span class="y">Support</span></div></div>
 </div></div>
 <div class="card" id="contact" style="margin-top:12px">
 <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div><h3>Let's Connect</h3><div class="sub2">Always happy to connect</div></div><div class="script">Let's Build<br/>a Healthier Tomorrow</div></div>
@@ -265,7 +287,7 @@ footer{max-width:1440px;margin:16px auto 0;padding:16px 28px;display:flex;justif
 </div></div>
 
 <footer>
-<div style="display:flex;gap:10px;align-items:center"><span class="mm-logo" style="font-size:22px">M</span><span><b style="color:#fff">Moaz Mohamed</b><br/>Healthcare IT Specialist</span></div>
+<div style="display:flex;gap:10px;align-items:center"><svg class="mm-svg" viewBox="0 0 48 28" fill="none" aria-hidden="true"><path d="M3 25 L11 4 L18 19 L24 9 L30 19 L37 4 L45 25" stroke="#3fa9ff" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b style="color:#fff">Moaz Mohamed</b><br/>Healthcare IT Specialist</span></div>
 <div>Continuous Learning &nbsp;•&nbsp; Better Solutions &nbsp;•&nbsp; Healthier Lives</div>
 <div>© <span id="year">2026</span> Moaz Mohamed. All rights reserved.</div>
 </footer>
