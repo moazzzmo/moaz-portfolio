@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Moaz Mohamed — Healthcare IT Specialist</title>
+<meta name="description" content="Moaz Mohamed — Healthcare IT Specialist, Implementation & Support Engineer, Enterprise Imaging PACS/RIS/VNA/HL7/DICOM"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#040b18;--card:#0a1428;--border:#1a2d4d;--txt:#eaf2ff;--mut:#8aa0bf;--cyan:#3ec6ff;--blue:#2f9bff}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+section{scroll-margin-top:80px}
+button{font-family:inherit}
+/* NAV */
+.topnav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 28px;background:rgba(4,11,24,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;white-space:nowrap}
+.mm-logo{font-weight:900;font-size:28px;letter-spacing:-2px;background:linear-gradient(180deg,#5cc8ff,#1a7bff);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.nav{display:flex;gap:26px;font-size:14px;color:#c6d4e8}
+.nav a{opacity:.8;padding-bottom:6px;border-bottom:2px solid transparent;transition:.2s}
+.nav a:hover{opacity:1;color:#fff}
+.nav a.active{opacity:1;color:#fff;border-bottom-color:var(--blue)}
+.btn-connect{border:1px solid #2f6cb3;border-radius:999px;padding:8px 18px;font-size:13px;font-weight:600;background:rgba(47,155,255,.1);transition:.2s;white-space:nowrap}
+.btn-connect:hover{background:rgba(47,155,255,.25);border-color:var(--cyan)}
+.hamburger{display:none;background:none;border:1px solid #2b4a73;color:#fff;border-radius:8px;font-size:18px;padding:6px 12px;cursor:pointer}
+/* HERO */
+.hero-wrap{position:relative;overflow:hidden;border-bottom:1px solid var(--border);background:radial-gradient(1000px 500px at 70% 0%,rgba(47,155,255,.25),transparent),linear-gradient(180deg,#071226,#040b18)}
+.hero-bg{position:absolute;inset:0;opacity:.4;background:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;-webkit-mask-image:linear-gradient(to left,black 30%,transparent 78%);mask-image:linear-gradient(to left,black 30%,transparent 78%)}
+.hero{position:relative;display:grid;grid-template-columns:250px minmax(0,1fr) 280px;gap:28px;padding:28px;max-width:1440px;margin:0 auto;align-items:start}
+.photo{width:250px;height:290px;border-radius:20px;overflow:hidden;border:1px solid #2a5a9a;box-shadow:0 0 0 1px rgba(62,198,255,.3),0 10px 40px rgba(0,0,0,.6);background:#0e1b33}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.photo-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:72px;font-weight:900;color:#5cc8ff;background:linear-gradient(135deg,#102341,#071226)}
+.kicker{letter-spacing:5px;font-size:11px;color:#9db4d2;margin:14px 0 8px}
+h1{font-size:clamp(38px,4.5vw,62px);line-height:1;font-weight:900;letter-spacing:-1px}
+h1 span{color:var(--cyan)}
+.sub{font-size:clamp(18px,2vw,26px);font-weight:300;color:#d6e2f3;margin:8px 0 14px}
+.desc{color:#b9c9e1;max-width:620px;line-height:1.65;font-size:14.5px}
+.meta3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin:22px 0 18px;max-width:720px}
+.meta3>div{padding:0 18px;border-left:1px solid #223b5e;font-size:13px;min-width:0}
+.meta3>div:first-child{border:0;padding-left:0}
+.meta3 b{display:block;font-size:13.5px}
+.meta3 small{color:var(--mut);font-size:11.5px}
+.meta-ico{font-size:18px;margin-bottom:6px}
+.cta-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(180deg,#3fb6ff,#1a8bff);border:0;color:#fff;font-weight:700;padding:12px 26px;border-radius:12px;font-size:14px;box-shadow:0 6px 24px rgba(47,155,255,.4);cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(47,155,255,.55)}
+.btn-ghost{border:1px solid #33507c;background:rgba(255,255,255,.03);color:#fff;padding:12px 26px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:8px}
+.btn-ghost:hover{border-color:var(--cyan);background:rgba(62,198,255,.1)}
+.open-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #2b4a73;border-radius:999px;padding:7px 16px;font-size:12.5px;margin-top:18px;background:rgba(255,255,255,.03)}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.5}}
+.right-tag{text-align:center;padding-top:40px}
+.right-tag h3{letter-spacing:3px;font-size:15px;font-weight:500}
+.right-tag h3 b{color:var(--cyan);font-weight:500}
+.right-tag h2{font-size:17px;letter-spacing:1px;margin:2px 0 12px}
+.bar{width:56px;height:4px;background:#00e5cc;margin:0 auto;border-radius:99px}
+.foot-tags{margin-top:110px;font-size:10.5px;letter-spacing:3px;color:#c2d2e8;line-height:2}
+/* STATS */
+.stats{max-width:1440px;margin:18px auto 0;padding:0 28px}
+.stats-inner{display:grid;grid-template-columns:1.1fr 1.2fr 1.2fr 1.2fr;background:linear-gradient(180deg,#0c1830,#081226);border:1px solid var(--border);border-radius:14px;padding:18px 10px}
+.stat{display:flex;gap:14px;align-items:center;padding:0 24px;border-left:1px solid #1e3555;min-width:0}
+.stat:first-child{border:0}
+.stat .n{font-size:28px;font-weight:800;color:var(--cyan)}
+.stat b{font-size:15px}.stat small{color:var(--mut);font-size:12px}
+/* GRID */
+.grid3{max-width:1440px;margin:16px auto;padding:0 28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:start}
+.card{background:linear-gradient(180deg,#0c1830,#081226);border:1px solid var(--border);border-radius:14px;padding:18px;min-width:0}
+.card h3{font-size:18px}.card .sub2{color:var(--mut);font-size:12.5px;margin:2px 0 14px}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:4px}
+.link{font-size:12px;color:#6fb7ff;background:none;border:0;cursor:pointer;white-space:nowrap}
+.link:hover{text-decoration:underline}
+/* SKILLS */
+.skill-search{width:100%;margin:6px 0 12px;padding:9px 12px;border-radius:9px;border:1px solid #254061;background:#081226;color:#fff;font-size:13px;outline:none}
+.skill-search:focus{border-color:var(--cyan)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid #254061;background:rgba(255,255,255,.03);border-radius:999px;padding:6px 12px 6px 6px;font-size:12.5px;cursor:default;transition:.15s}
+.pill:hover{border-color:var(--cyan);background:rgba(62,198,255,.1)}
+.pill i{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:11px;color:#fff;font-weight:800;flex-shrink:0}
+.pill.hidden-extra{display:none}
+.pills.expanded .pill.hidden-extra{display:inline-flex}
+/* TIMELINE */
+.tl{position:relative;padding-left:52px}
+.tl:before{content:'';position:absolute;left:19px;top:6px;bottom:6px;width:1px;background:#1e3555}
+.tl-item{position:relative;margin-bottom:20px}
+.tl-item:last-child{margin-bottom:4px}
+.tl-item:before{content:'';position:absolute;left:-37px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(62,198,255,.15)}
+.comp-logo{position:absolute;left:-52px;top:0;width:38px;height:38px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:10px;color:#111;overflow:hidden;text-align:center;line-height:1.1}
+.comp-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.tl-item b{font-size:13.5px;display:block}
+.tl-item .co{color:var(--cyan);font-size:12px}
+.tl-item small{color:var(--mut);font-size:11.5px}
+.tl-item p{color:#a9bdd6;font-size:12px;margin-top:6px;line-height:1.55}
+/* PROJECTS */
+.proj{display:grid;grid-template-columns:1fr;gap:10px}
+.pbox{border:1px solid #223c60;border-radius:12px;padding:12px;background:#0b162c;transition:.2s}
+.pbox:hover{border-color:#3c779d;transform:translateY(-1px)}
+.pbox .ph{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.pbox .ph b{font-size:12px;display:block}
+.pbox .ph small{display:block;color:var(--mut);font-size:10px;font-weight:400}
+.plogo{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;flex-shrink:0;overflow:hidden;background:#fff;font-size:14px}
+.plogo img{width:100%;height:100%;object-fit:contain;display:block}
+.pbox p{font-size:11.5px;color:#a9bdd6;line-height:1.55}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.tags span{font-size:10px;padding:3px 8px;border-radius:99px;background:rgba(62,198,255,.12);border:1px solid rgba(62,198,255,.2);color:#9ad9ff}
+.tags span.y{background:rgba(245,158,11,.14);border-color:rgba(245,158,11,.3);color:#ffd28a}
+/* CONNECT */
+.connect{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.citem{display:flex;gap:10px;align-items:center;font-size:12px;border:1px solid transparent;border-radius:10px;padding:8px;transition:.15s;min-width:0}
+.citem:hover{border-color:#2b4a73;background:rgba(255,255,255,.03)}
+.citem small{display:block;color:var(--mut);font-size:11px;word-break:break-all}
+.cico{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;flex-shrink:0;font-size:14px}
+.copy-btn{margin-left:auto;background:none;border:1px solid #2b4a73;color:var(--mut);border-radius:6px;font-size:11px;padding:4px 8px;cursor:pointer;flex-shrink:0}
+.copy-btn:hover{color:#fff;border-color:var(--cyan)}
+.script{font-family:'Caveat',cursive;font-size:20px;color:#cfe3ff;text-align:right;line-height:1.1;white-space:nowrap}
+/* CONTACT FORM */
+.contact-form{margin-top:14px;border-top:1px solid #223b5e;padding-top:14px}
+.contact-form h4{font-size:13px;margin-bottom:10px}
+.contact-form input,.contact-form textarea{width:100%;padding:10px 12px;border-radius:9px;border:1px solid #254061;background:#081226;color:#fff;font-size:13px;outline:none;margin-bottom:8px;font-family:inherit;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--cyan)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+/* SECTIONS */
+.wide{max-width:1440px;margin:16px auto 0;padding:0 28px}
+.wide-card{background:linear-gradient(180deg,#0c1830,#081226);border:1px solid var(--border);border-radius:14px;padding:22px}
+.wide-card h2{font-size:22px;margin-bottom:4px}
+.wide-card .sub2{color:var(--mut);font-size:13px;margin-bottom:16px}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cert{border:1px solid #223c60;border-radius:10px;padding:12px;background:#0b162c;font-size:12px}
+.cert b{display:block;font-size:12.5px;margin-bottom:4px}
+.cert small{color:var(--mut)}
+.edu{margin-top:10px;font-size:13px;color:#b9c9e1;border-left:3px solid var(--cyan);padding-left:12px}
+/* FOOTER */
+footer{max-width:1440px;margin:16px auto 0;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--mut);font-size:12px;border-top:1px solid var(--border);flex-wrap:wrap}
+/* MODAL */
+.modal-ov{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:100;padding:18px}
+.modal-ov.open{display:flex}
+.modal{background:#0c1830;border:1px solid #2b4a73;border-radius:16px;max-width:640px;width:100%;max-height:82vh;overflow:auto;padding:24px}
+.modal h3{font-size:18px;margin-bottom:4px}
+.modal .msub{color:var(--mut);font-size:12.5px;margin-bottom:16px}
+.modal-close{float:right;background:none;border:1px solid #2b4a73;color:#fff;border-radius:8px;padding:6px 12px;cursor:pointer}
+.modal-close:hover{border-color:var(--cyan)}
+.mlist{display:grid;gap:10px;font-size:13px;color:#c6d4e8}
+.mlist div{border:1px solid #223c60;border-radius:10px;padding:10px 12px;background:#0b162c}
+/* TOAST + TOP */
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#0e2a45;border:1px solid var(--cyan);color:#fff;padding:10px 20px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:200}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#toTop{position:fixed;right:20px;bottom:20px;width:42px;height:42px;border-radius:50%;border:1px solid #2b4a73;background:#0c1830;color:#fff;font-size:18px;cursor:pointer;display:none;z-index:90}
+#toTop.show{display:block}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(14px);transition:.5s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:1100px){.hero{grid-template-columns:220px minmax(0,1fr)}.right-tag{display:none}.grid3{grid-template-columns:1fr 1fr}.nav{display:none}.nav.mobile-open{display:flex;position:absolute;top:100%;left:0;right:0;background:#071226;flex-direction:column;padding:14px 28px;gap:14px;border-bottom:1px solid var(--border)}.hamburger{display:block}.cert-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.photo{width:100%;height:320px}.meta3{grid-template-columns:1fr;gap:12px}.meta3>div{border:0;border-top:1px solid #223b5e;padding:12px 0 0}.meta3>div:first-child{border:0;padding-top:0}.grid3{grid-template-columns:1fr}.stats-inner{grid-template-columns:1fr 1fr;gap:14px}.stat{border:0;padding:0}.connect{grid-template-columns:1fr}.cert-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.script{display:none}footer{flex-direction:column;text-align:center}}
+@media print{.topnav,.cta-row,.contact-form,#toTop,#toast,.modal-ov{display:none!important}body{background:#fff;color:#000}.card,.wide-card,.stats-inner{background:#fff!important;color:#000}}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+<div class="brand"><span class="mm-logo">M</span> Moaz Mohamed</div>
+<nav class="nav" id="mainNav">
+<a class="active" href="#home">Home</a><a href="#about">About</a><a href="#exp">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
+</nav>
+<div style="display:flex;gap:10px;align-items:center">
+<a class="btn-connect" href="#contact">✈ Let's Connect</a>
+<button class="hamburger" id="burger" aria-label="Menu">☰</button>
+</div>
+</header>
+
+<div class="hero-wrap" id="home"><div class="hero-bg" aria-hidden="true"></div>
+<div class="hero">
+<div class="reveal in">
+<div class="photo"><img id="profileImg" src="assets/moaz-profile.png" alt="Moaz Mohamed"/></div>
+<div class="open-badge"><span class="dot"></span> Open to Opportunities</div>
+</div>
+<div id="about" class="reveal in">
+<div class="kicker">HEALTHCARE IT SPECIALIST</div>
+<h1>Moaz <span>Mohamed</span></h1>
+<div class="sub">Implementation &amp; Support Engineer</div>
+<p class="desc">Passionate about Healthcare IT and Enterprise Imaging, I design, implement and support solutions that improve patient care through technology.</p>
+<div class="meta3">
+<div><div class="meta-ico">📍</div><b>Riyadh, Saudi Arabia</b><small>(Originally from Alexandria, Egypt)</small></div>
+<div><div class="meta-ico">💼</div><b>AGFA HealthCare</b><small>Team Leader – Implementation &amp; Support</small></div>
+<div><div class="meta-ico">✉️</div><b>Available for</b><small>new opportunities</small></div>
+</div>
+<div class="cta-row">
+<button class="btn-primary" data-scroll="#contact">✈ &nbsp; Get In Touch &nbsp; →</button>
+<button class="btn-ghost" id="cvBtn">⬇ &nbsp; Download CV</button>
+</div>
+</div>
+<div class="right-tag"><h3>TECHNOLOGY</h3><h3><b>FOR A HEALTHIER</b></h3><h2>TOMORROW</h2><div class="bar"></div><div class="foot-tags">PEOPLE &nbsp;•&nbsp; DATA &nbsp;•&nbsp; INNOVATION<br/>BETTER CARE</div></div>
+</div></div>
+
+<div class="stats reveal"><div class="stats-inner">
+<div class="stat"><span style="font-size:32px">🗄️</span><div><div class="n" data-count="10">10+</div><small>Years of Experience</small></div></div>
+<div class="stat"><span style="font-size:28px">🏥</span><div><b>Healthcare</b><br/><small>PACS • RIS • VNA • HL7 • DICOM</small></div></div>
+<div class="stat"><span style="font-size:28px">🌐</span><div><b>Middle East &amp; EMEA</b><br/><small>Regional Support &amp; Implementation</small></div></div>
+<div class="stat"><span style="font-size:28px">👥</span><div><b>Successful Projects</b><br/><small>Government • Private • Enterprise</small></div></div>
+</div></div>
+
+<div class="grid3">
+<div class="card reveal" id="skills">
+<div class="card-head"><div><h3>Technical Skills</h3><div class="sub2">Tools &amp; Technologies</div></div><button class="link" data-modal="skillsModal">View All →</button></div>
+<input class="skill-search" id="skillSearch" type="search" placeholder="Filter skills… (e.g. DICOM, Linux)"/>
+<div class="pills" id="skillPills">
+<span class="pill"><i style="background:#1a6dff">◍</i>PACS</span><span class="pill"><i style="background:#2f9bff">★</i>RIS</span><span class="pill"><i style="background:#0e9">◎</i>VNA</span><span class="pill"><i style="background:#334155">✛</i>DICOM</span><span class="pill"><i style="background:#444">⇄</i>HL7</span>
+<span class="pill"><i style="background:#e11d48">✦</i>AGFA Enterprise Imaging</span><span class="pill"><i style="background:#16a34a">M</i>Millensys</span><span class="pill"><i style="background:#dc2626">◯</i>Oracle</span>
+<span class="pill"><i style="background:#eab308;color:#111">▲</i>Linux</span><span class="pill"><i style="background:#0891b2">▦</i>Windows Server</span><span class="pill"><i style="background:#4f46e5">V</i>VMware</span><span class="pill"><i style="background:#0ea5e9">❖</i>Hyper-V</span>
+<span class="pill"><i style="background:#0ea5e9">🐳</i>Docker</span><span class="pill"><i style="background:#2563eb">☸</i>Kubernetes</span><span class="pill"><i style="background:#facc15">🐍</i>Python</span><span class="pill"><i style="background:#facc15;color:#111">JS</i>JavaScript</span>
+<span class="pill"><i style="background:#7f1d1d">M</i>Mirth Connect</span><span class="pill"><i style="background:#1d4ed8">R</i>Rhapsody</span><span class="pill"><i style="background:#0369a1">🐬</i>MySQL</span>
+<span class="pill hidden-extra"><i style="background:#991b1b">DB</i>Oracle Database</span><span class="pill hidden-extra"><i style="background:#7c3aed">◉</i>Looker Analytics</span><span class="pill hidden-extra"><i style="background:#0d9488">⚙</i>Networking</span><span class="pill hidden-extra"><i style="background:#0d9488">◈</i>SQL Optimization</span><span class="pill hidden-extra"><i style="background:#334155">⬡</i>Keycloak / SSO</span><span class="pill hidden-extra"><i style="background:#475569">▤</i>JBoss / WildFly</span>
+</div>
+<button class="link" id="moreSkills" style="margin-top:10px">+ Show all skills</button>
+</div>
+
+<div class="card reveal" id="exp">
+<div class="card-head"><div><h3>Professional Experience</h3><div class="sub2">My Career Journey</div></div><button class="link" data-modal="expModal">View All →</button></div>
+<div class="tl">
+<div class="tl-item"><div class="comp-logo">AGFA<span style="color:#e11d48">◆</span><img src="https://logo.clearbit.com/agfahealthcare.com" alt="" loading="lazy" onerror="this.remove()"/></div><b>Team Leader – Implementation &amp; Support Engineer</b><div class="co">AGFA HealthCare</div><small>Jul 2024 – Present &nbsp;|&nbsp; Riyadh, Saudi Arabia</small><p>Leading implementation and support activities for Enterprise Imaging solutions across Middle East and EMEA region.</p></div>
+<div class="tl-item"><div class="comp-logo" style="background:linear-gradient(145deg,#fff,#c9e0f2);color:#2d67a5;font-size:20px">M</div><b>L3 Technical Support Team Leader</b><div class="co">Millensys</div><small>Before Jul 2024 &nbsp;|&nbsp; Middle East</small><p>Led technical support team and handled complex healthcare IT implementations and support cases.</p></div>
+<div class="tl-item"><div class="comp-logo" style="background:linear-gradient(145deg,#fff,#c9e0f2);color:#2d67a5;font-size:20px">M</div><b>Senior Application Support Engineer</b><div class="co">Millensys</div><small>Earlier Experience</small><p>Provided L2/L3 support for healthcare systems including PACS, RIS, VNA and integrations.</p></div>
+</div></div>
+
+<div class="reveal"><div class="card" id="projects">
+<div class="card-head"><div><h3>Featured Projects</h3><div class="sub2">Selected Highlights</div></div><button class="link" data-modal="projModal">View All →</button></div>
+<div class="proj">
+<div class="pbox"><div class="ph"><div class="plogo">🌴<img src="https://logo.clearbit.com/moh.gov.sa" alt="" loading="lazy" onerror="this.remove()"/></div><div><b>NPAG - Saudi MOH</b><small>National PACS Deployment</small></div></div><p>Large-scale PACS deployment for Ministry of Health across multiple sites.</p><div class="tags"><span>PACS</span><span>VNA</span><span>Migration</span></div></div>
+<div class="pbox"><div class="ph"><div class="plogo" style="background:#0aa14a">✦</div><div><b>Aramco</b><small>HIS Integration</small></div></div><p>Integration of AGFA solutions with Aramco HIS environment.</p><div class="tags"><span>HL7</span><span>Integration</span><span>Enterprise</span></div></div>
+<div class="pbox"><div class="ph"><div class="plogo" style="background:#1a8bff">🗄️</div><div><b>Enterprise Imaging</b><small>Implementation &amp; Support</small></div></div><p>Deployment and support of AGFA Enterprise Imaging solutions.</p><div class="tags"><span class="y">AGFA</span><span class="y">DICOM</span><span class="y">Support</span></div></div>
+</div></div>
+<div class="card" id="contact" style="margin-top:12px">
+<div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div><h3>Let's Connect</h3><div class="sub2">Always happy to connect</div></div><div class="script">Let's Build<br/>a Healthier Tomorrow</div></div>
+<div class="connect">
+<a class="citem" href="https://www.linkedin.com/in/moazzmo" target="_blank" rel="noopener"><span class="cico" style="background:#0a66c2">in</span><span><b>LinkedIn</b><small>linkedin.com/in/moazzmo</small></span></a>
+<a class="citem" href="https://github.com/moazzzmo" target="_blank" rel="noopener"><span class="cico" style="background:#e7f0fa;color:#101d2b">◉</span><span><b>GitHub</b><small>github.com/moazzzmo</small></span></a>
+<a class="citem" href="https://wa.me/201004153208" target="_blank" rel="noopener"><span class="cico" style="background:#25d366">✆</span><span><b>WhatsApp</b><small>+20 100 415 3208</small></span><button class="copy-btn" data-copy="+201004153208">Copy</button></a>
+<a class="citem" href="mailto:moazzmohamedd@gmail.com"><span class="cico" style="background:#1a8bff">✉</span><span><b>Email</b><small>moazzmohamedd@gmail.com</small></span><button class="copy-btn" data-copy="moazzmohamedd@gmail.com">Copy</button></a>
+</div>
+<form class="contact-form" id="contactForm">
+<h4>Send a message</h4>
+<div class="form-row"><input id="cfName" type="text" placeholder="Your name" required/><input id="cfEmail" type="email" placeholder="Your email" required/></div>
+<textarea id="cfMsg" rows="3" placeholder="Hi Moaz, I'd like to discuss…" required></textarea>
+<button class="btn-primary" type="submit" style="width:100%;justify-content:center">Send via Email →</button>
+</form>
+</div></div>
+</div>
+
+<div class="wide reveal" id="certs"><div class="wide-card">
+<h2>Certifications &amp; Education</h2><div class="sub2">Foundation behind 10+ years in Healthcare IT</div>
+<div class="cert-grid">
+<div class="cert"><b>🖥️ Linux System Administration I &amp; II</b><small>Cisco Networking Academy</small></div>
+<div class="cert"><b>🔌 CCNA &amp; CCNP</b><small>Networking — TCP/IP, DNS, DHCP, LAN/WAN</small></div>
+<div class="cert"><b>🏥 HL7 / DICOM Integrations</b><small>AGFA HealthCare</small></div>
+<div class="cert"><b>☁️ VMware &amp; Hyper-V Virtualization</b><small>AGFA HealthCare</small></div>
+<div class="cert"><b>⇄ Mirth Connect · Rhapsody 6.x</b><small>Integration engines</small></div>
+<div class="cert"><b>🗄️ Oracle 19c · MySQL · SQL</b><small>Database operations &amp; optimization</small></div>
+</div>
+<div class="edu"><b>B.Sc. Electronics &amp; Communications Engineering</b><br/><small style="color:var(--mut)">Arab Academy for Science, Technology &amp; Maritime Transport (AASTMT) · 2006–2012</small></div>
+</div></div>
+
+<footer>
+<div style="display:flex;gap:10px;align-items:center"><span class="mm-logo" style="font-size:22px">M</span><span><b style="color:#fff">Moaz Mohamed</b><br/>Healthcare IT Specialist</span></div>
+<div>Continuous Learning &nbsp;•&nbsp; Better Solutions &nbsp;•&nbsp; Healthier Lives</div>
+<div>© <span id="year">2026</span> Moaz Mohamed. All rights reserved.</div>
+</footer>
+
+<div class="modal-ov" id="skillsModal"><div class="modal"><button class="modal-close" data-close>✕ Close</button><h3>All Technical Skills</h3><div class="msub">40+ tools across imaging, infrastructure &amp; integration</div><div class="mlist">
+<div><b>Healthcare &amp; Imaging</b> — PACS, RIS, VNA, DICOM, HL7 ADT/ORM/ORU/ACK, AGFA Enterprise Imaging, Millensys, WADO/REST</div>
+<div><b>Infrastructure</b> — Linux (RHEL/CentOS/Ubuntu), Windows Server 2012–2022, VMware, Hyper-V, Proxmox, Docker, Kubernetes, NetApp, NFS/SMB, HAProxy/F5</div>
+<div><b>Data &amp; Integration</b> — Oracle 19c, MySQL, MS SQL, Mirth Connect, Rhapsody, ETL/DWH, Looker Analytics, Python, JavaScript, Bash, PowerShell, Keycloak/SSO, JBoss/WildFly, Prometheus, Grafana</div>
+<div><b>Networking</b> — CCNA/CCNP, TCP/IP, DNS, DHCP, VLAN, Firewalls, VPN</div>
+</div></div></div>
+
+<div class="modal-ov" id="expModal"><div class="modal"><button class="modal-close" data-close>✕ Close</button><h3>Full Career Journey</h3><div class="msub">10+ years across 6 roles</div><div class="mlist">
+<div><b>AGFA HealthCare (2024–Present)</b> — Implementation Specialist / Team Leader, Riyadh. Multi-country EI delivery, PACS/RIS/VNA, DICOM/HL7, team leadership across MEA.</div>
+<div><b>Millensys (2021–2024)</b> — Technical Implementation &amp; Support Lead / L3 Team Leader. Escalations, go-lives, L2/L3 support.</div>
+<div><b>Da3m for IT Solutions (2020–2021)</b> — System Administrator.</div>
+<div><b>Sana Technology (2018–2020)</b> — Application Support Engineer.</div>
+<div><b>Spectrum Diamond Trade, KSA (2015–2018)</b> — Technical Support Engineer.</div>
+<div><b>IHA-UNI &amp; CNC Broadcasting (2013–2015)</b> — SNG Engineer.</div>
+</div></div></div>
+
+<div class="modal-ov" id="projModal"><div class="modal"><button class="modal-close" data-close>✕ Close</button><h3>All Selected Projects</h3><div class="msub">Government • Private • Enterprise</div><div class="mlist">
+<div><b>NPAG – Saudi MOH National PACS</b> — Multi-site national deployment, VNA, migration.</div>
+<div><b>Aramco HIS Integration</b> — AGFA EI + HIS, HL7, secure clinical workflow.</div>
+<div><b>STC VRO National PACS (2025–26)</b> — 35+ hospitals, DICOM Store/MWL, F5, Rhapsody + CareWare/HIS.</div>
+<div><b>Johns Hopkins Aramco Healthcare STC Upgrade (2025)</b> — Upgrade &amp; operations.</div>
+<div><b>Royal Commission Jubail &amp; Yanbu (2025)</b> — Hospital deployment.</div>
+<div><b>Regina Maria Romania / QAFH Qassim / AL SALAM Kuwait / Baheya Egypt / AUBMC Lebanon / MOH MMCH</b> — Migrations, deployments, EI upgrades.</div>
+</div></div></div>
+
+<div id="toast"></div>
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+// Year
+$('#year').textContent=new Date().getFullYear();
+// Photo fallback chain: assets/moaz-profile.png -> photo.jpg -> MM
+var img=$('#profileImg');
+img.addEventListener('error',function h(){
+  var cur=img.getAttribute('src');
+  if(cur.indexOf('assets/')===0){img.src='photo.jpg';}
+  else{img.removeEventListener('error',h);var d=document.createElement('div');d.className='photo-fallback';d.textContent='MM';img.replaceWith(d);}
+});
+// Mobile nav
+var burger=$('#burger'),nav=$('#mainNav');
+burger.addEventListener('click',function(){nav.classList.toggle('mobile-open')});
+$$('#mainNav a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('mobile-open')})});
+// Smooth scroll buttons
+$$('[data-scroll]').forEach(function(b){b.addEventListener('click',function(){var t=$(b.getAttribute('data-scroll'));if(t)t.scrollIntoView({behavior:'smooth'})})});
+// Active nav
+var secs=['home','about','exp','skills','projects','certs','contact'].map(function(id){return document.getElementById(id)}).filter(Boolean);
+var links=$$('#mainNav a');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+  secs.forEach(function(s){io.observe(s)});
+}
+// Skill search + show all
+var search=$('#skillSearch'),pills=$('#skillPills'),more=$('#moreSkills');
+function filterSkills(){var q=search.value.trim().toLowerCase();$$('.pill',pills).forEach(function(p){var t=p.textContent.toLowerCase();var show=!q||t.indexOf(q)>-1;if(show&&p.classList.contains('hidden-extra')&&!pills.classList.contains('expanded')){p.style.display='';p.dataset.pending='1';}else{p.style.display=show?'':'none';p.dataset.pending='';}})}
+search.addEventListener('input',filterSkills);
+more.addEventListener('click',function(){pills.classList.toggle('expanded');var ex=pills.classList.contains('expanded');more.textContent=ex?'− Show less':'+ Show all skills';if(!ex)filterSkills();});
+$$('.pill',pills).forEach(function(p){p.addEventListener('click',function(){toast(p.textContent.trim())})});
+// Modals
+$$('[data-modal]').forEach(function(b){b.addEventListener('click',function(){openModal(b.getAttribute('data-modal'))})});
+function openModal(id){var m=document.getElementById(id);if(m)m.classList.add('open')}
+$$('.modal-ov').forEach(function(m){m.addEventListener('click',function(e){if(e.target===m||e.target.hasAttribute('data-close'))m.classList.remove('open')})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')$$('.modal-ov.open').forEach(function(m){m.classList.remove('open')})});
+// Copy buttons
+$$('[data-copy]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var v=b.getAttribute('data-copy');if(navigator.clipboard)navigator.clipboard.writeText(v).then(function(){toast('Copied: '+v)},function(){toast(v)});else toast(v);})});
+// CV
+$('#cvBtn').addEventListener('click',function(){
+  var candidates=['Moaz-Mohamed-CV.pdf','CV.pdf','cv.pdf','assets/Moaz-Mohamed-CV.pdf'];
+  (function tryNext(i){
+    if(i>=candidates.length){toast('CV file not found — opening print view');setTimeout(function(){window.print()},400);return;}
+    fetch(candidates[i],{method:'HEAD'}).then(function(r){if(r.ok){var a=document.createElement('a');a.href=candidates[i];a.download='Moaz-Mohamed-CV.pdf';document.body.appendChild(a);a.click();a.remove();toast('Downloading CV…');}else tryNext(i+1);}).catch(function(){tryNext(i+1)});
+  })(0);
+});
+// Contact form -> mailto
+$('#contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=$('#cfName').value.trim(),em=$('#cfEmail').value.trim(),m=$('#cfMsg').value.trim();
+  if(!n||!em||!m){toast('Please fill all fields');return;}
+  var subject=encodeURIComponent('Portfolio contact from '+n);
+  var body=encodeURIComponent(m+'\n\n— '+n+' ('+em+')');
+  window.location.href='mailto:moazzmohamedd@gmail.com?subject='+subject+'&body='+body;
+  toast('Opening your email app…');
+});
+// Toast
+var toastT;function toast(msg){var t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('show')},2200);}
+// To top + reveal
+var top=$('#toTop');window.addEventListener('scroll',function(){top.classList.toggle('show',window.scrollY>600)},{passive:true});
+top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+if('IntersectionObserver' in window){var rio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}})},{threshold:.08});$$('.reveal').forEach(function(el){rio.observe(el)});}else{$$('.reveal').forEach(function(el){el.classList.add('in')});}
+})();
+</script>
+</body>
+</html>
